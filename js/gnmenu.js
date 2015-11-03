@@ -1,15 +1,18 @@
 /**
+ * Update by Adam J. Jolicoeur (mindreeper2420)
+ * November 3, 2015
+ *
  * gnmenu.js v1.0.0
  * http://www.codrops.com
  *
  * Licensed under the MIT license.
  * http://www.opensource.org/licenses/mit-license.php
- * 
+ *
  * Copyright 2013, Codrops
  * http://www.codrops.com
  */
 ;( function( window ) {
-	
+
 	'use strict';
 
 	// http://stackoverflow.com/a/11381730/989439
@@ -19,14 +22,14 @@
 		return check;
 	}
 
-	function gnMenu( el, options ) {	
+	function gnMenu( el, options ) {
 		this.el = el;
 		this._init();
 	}
 
 	gnMenu.prototype = {
 		_init : function() {
-			this.trigger = this.el.querySelector( 'a.gn-icon-menu' );
+			this.trigger = this.el.querySelector( 'a.hamburger' );
 			this.menu = this.el.querySelector( 'nav.gn-menu-wrapper' );
 			this.isMenuOpen = false;
 			this.eventtype = mobilecheck() ? 'touchstart' : 'click';
@@ -44,10 +47,10 @@
 			if( !mobilecheck() ) {
 				this.trigger.addEventListener( 'mouseover', function(ev) { self._openIconMenu(); } );
 				this.trigger.addEventListener( 'mouseout', function(ev) { self._closeIconMenu(); } );
-			
+
 				this.menu.addEventListener( 'mouseover', function(ev) {
-					self._openMenu(); 
-					document.addEventListener( self.eventtype, self.bodyClickFn ); 
+					self._openMenu();
+					document.addEventListener( self.eventtype, self.bodyClickFn );
 				} );
 			}
 			this.trigger.addEventListener( this.eventtype, function( ev ) {

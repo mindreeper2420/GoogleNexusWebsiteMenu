@@ -1,0 +1,75 @@
+* {
+    font-family: "Roboto", Arial, sans-serif;
+}
+.gears:before {
+  content: "\f085"; /* fa-cogs */
+  font-family: FontAwesome;
+  padding-right: 5px;
+}
+.hamburger:before {
+  content: "\f00a"; /* fa-th */
+  font-family: FontAwesome;
+  font-size: 1.5em;
+  margin-left: -15px;
+}
+.inverted {
+	background-color: #333;
+}
+.inverted-light {
+	background-color: #666666;
+}
+.invert-colors {
+	height: auto;
+	width: auto;
+}
+.main-wrapper {
+  padding: 50px 0 50px 100px;
+}
+
+/* Customize the sidebar */
+.gn-menu-wrapper.gn-open-all {
+  box-shadow: 2px 2px 5px #999;
+}
+
+/* Cards */
+.card {
+	display: inline-block;
+	background-color: #fff;
+	height: 30em;
+	min-height: 30em;
+	width: 30em;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	border-left: 5px solid #999;
+	box-shadow: 0px 2px 5px 1px #999;
+	margin-right: 50px;
+}
+
+.button {
+	position: relative;
+	top: 1em;
+	left: 25em;
+	padding: 10px;
+	margin: 5px;
+	height: 5px;
+	width: 5px;
+	border-radius: 50%;
+	tranform: scale (0.9);
+	transition: color 0.2s ease, background-color 0.2s ease, transform 0.3s ease;
+	border: 5px solid transparent;
+	box-shadow: 5px 0 10px #999;
+	background-color: #999;
+}
+.button:hover {
+	background-color: #888;
+	transform: scale(1.2);
+}
+.switch {
+
+}
+.power {
+	background-color: green;
+}
+.power:hover {
+	background-color: green;
+}
